@@ -78,14 +78,14 @@ if ospath.exists('pyrogram.session'):
 if ospath.exists('pyrogram.session-journal'):
     osremove('pyrogram.session-journal')
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6101411411:AAHjK_BV0KolN2aFf1Ii1xOlLeTPVqh8Hdk')
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
 
 bot_id = int(BOT_TOKEN.split(':', 1)[0])
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://nas0055:nas0055@cluster0.jptunau.mongodb.net/?retryWrites=true&w=majority')
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ''
 
@@ -110,27 +110,27 @@ if DATABASE_URL:
         del qbit_opt['_id']
         qbit_options = qbit_opt
     conn.close()
-    BOT_TOKEN = environ.get('BOT_TOKEN', '')
+    BOT_TOKEN = environ.get('BOT_TOKEN', '6101411411:AAHjK_BV0KolN2aFf1Ii1xOlLeTPVqh8Hdk')
     bot_id = int(BOT_TOKEN.split(':', 1)[0])
     DATABASE_URL = environ.get('DATABASE_URL', '')
 else:
     config_dict = {}
 
-OWNER_ID = environ.get('OWNER_ID', '')
+OWNER_ID = environ.get('OWNER_ID', '1854576276')
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
+TELEGRAM_API = environ.get('TELEGRAM_API', '7685644')
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', 'a713f30f5a21716e6bff334e8ac19b17')
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
